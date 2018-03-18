@@ -55,7 +55,7 @@ public class ConsumerControllerClient {
 		return response.getBody();*/
 	}
 
-	public Employee getDataFallBack(String id) {
+	public Employee getDataFallBack(Integer id) {
 		Employee emp = new Employee();
 		emp.setName("fallback-emp1");
 		return emp;
