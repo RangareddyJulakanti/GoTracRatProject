@@ -17,6 +17,7 @@ import com.tesla.springcloud.model.Employee;
 import com.tesla.springcloud.repository.ProducerRepository;
 
 @RestController
+@RequestMapping("/api/v1/")
 public class TestController {
 	
 	final static Logger logger = Logger.getLogger(TestController.class);
