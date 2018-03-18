@@ -9,10 +9,10 @@ import com.tesla.springcloud.model.Employee;
 
 @FeignClient(name="employee-producer")
 public interface RemoteCallService {
-	@RequestMapping(method=RequestMethod.GET, value="/employee")
+	@RequestMapping(method=RequestMethod.GET, value="api/v1/employee")
 	public Employee getData();
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/employee/{empId}")
+	@RequestMapping(method = RequestMethod.GET, value = "/api/v1/employee/{empId}")
     public Employee getEmployee(@PathVariable("empId") Integer empId);
  
 
