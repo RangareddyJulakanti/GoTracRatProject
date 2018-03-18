@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: employee-producer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mdm
+    username: root
+    password: Nani
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: platform=org.hibernate.dialect.MySQL5Dialect
+        
+        
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8083
+
+
+
+
+
+
+
+#server.contextPath = /Producer
