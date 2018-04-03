@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: configServer
+  profiles:
+    include: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:/SpringProperties
+        bootstrap: true
